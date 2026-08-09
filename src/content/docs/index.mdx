@@ -1,40 +1,93 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Neodash Modding Guide
+description: Community documentation for understanding, creating, and modifying Neodash content.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: A practical starting point for understanding Neodash and documenting how its content works.
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Read the game findings
+      link: /reference/game-findings/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: View Neodash on Steam
+      link: https://store.steampowered.com/app/1514950/Neodash/
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Game overview
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+**Neodash** is a fast-paced arcade racing game developed and published by
+Axan Gray. Released on August 17, 2022, it challenges players to drift, steer,
+and launch a vehicle across neon tracks while avoiding traps, gaps, and a world
+that collapses behind them. Its environments react to an electronic soundtrack,
+making timing, speed, and presentation part of the same experience.
+
+<CardGrid>
+	<Card title="High-speed campaign" icon="right-arrow">
+		More than 45 levels introduce new mechanics over time, with hidden red
+		gates unlocking harder versions of stages.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Music-driven world" icon="heart">
+		A soundtrack of more than 25 electronic tracks drives reactive visual and
+		environmental effects.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Built-in level editor" icon="setting">
+		Create tracks from customizable roads, obstacles, effects, and
+		environments, then publish them for other players.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Community competition" icon="open-book">
+		Play and rate community levels, chase leaderboard times, and race against
+		other players' ghosts.
 	</Card>
 </CardGrid>
+
+## Quick facts
+
+<dl class="quick-facts not-content">
+	<div>
+		<dt>Developer and publisher</dt>
+		<dd>Axan Gray</dd>
+	</div>
+	<div>
+		<dt>Release date</dt>
+		<dd>August 17, 2022</dd>
+	</div>
+	<div>
+		<dt>Genres</dt>
+		<dd>Action, indie, racing</dd>
+	</div>
+	<div>
+		<dt>Steam app ID</dt>
+		<dd><code>1514950</code></dd>
+	</div>
+	<div class="wide">
+		<dt>Primary modes</dt>
+		<dd>Campaign, level editor, community levels, and time trials</dd>
+	</div>
+</dl>
+
+## Modding baseline
+
+Neodash includes an official level editor and community browser. External
+modding in this guide focuses on two additional paths:
+
+- **UE4SS** for runtime inspection, Lua scripting, and hooks.
+- **Classic UE4 Pak overrides** for cooked-asset replacement.
+
+The inspected game is based on Unreal Engine 4.26.2 and uses the internal
+project name `Runway`. See [Game Findings](/reference/game-findings/) for the verified
+engine and Steam build details, Pak structure, loose level format, runtime
+components, user-data paths, and open questions that still need in-game testing.
+
+:::note[About this guide]
+
+This is community-authored documentation and is not affiliated with Axan Gray.
+Treat version-sensitive modding details as unverified until they are reproduced
+and documented.
+
+:::
+
+Game facts on this page are based on the
+[official Neodash Steam listing](https://store.steampowered.com/app/1514950/Neodash/).

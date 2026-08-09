@@ -6,8 +6,8 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Neodash Modding Guide',
+			customCss: ['./src/styles/neodash.css'],
 			sidebar: [
 				{
 					label: 'Guides',
