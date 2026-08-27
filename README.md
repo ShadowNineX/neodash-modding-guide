@@ -1,49 +1,77 @@
-# Starlight Starter Kit: Basics
+<p align="center">
+  <img src="src/assets/neodash_mod_loader_logo_no_bg.png" alt="Neodash Modding Guide logo" width="220">
+</p>
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+<h1 align="center">Neodash Modding Guide</h1>
 
+<p align="center">
+  Community documentation for installing mods and understanding Neodash's Unreal Engine content.
+</p>
+
+## What this project contains
+
+This repository contains the Astro and Starlight documentation site for Neodash modding.
+
+The guide currently covers:
+
+- Installing UE4SS for Neodash.
+- Installing the CustomServer Lua mod.
+- Runtime scripting and inspection.
+- Classic UE4 Pak overrides.
+- Verified game files, paths, and engine information.
+
+Start with the [Custom Server guide](src/content/docs/guides/custom-server.md), or read the [Game Findings reference](src/content/docs/reference/game-findings.md).
+
+## Run the site locally
+
+Use [Bun](https://bun.sh/) from the repository root:
+
+```sh
+bun install
+bun run dev
 ```
-bun create astro@latest -- --template starlight
+
+Open `http://localhost:4321` in your browser.
+
+## Build and preview
+
+Create a production build and preview it locally:
+
+```sh
+bun run build
+bun run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The generated site is written to `dist/`.
 
-## 🚀 Project Structure
+## Project structure
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
+```text
 .
-├── public/
+├── public/                  Static files, such as the favicon
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   ├── assets/              Images processed by Astro
+│   ├── content/docs/        Markdown and MDX documentation
+│   └── styles/              Site-wide styles
+├── astro.config.mjs         Astro and Starlight configuration
+├── package.json             Scripts and dependencies
+└── tsconfig.json            TypeScript configuration
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Add documentation pages under `src/content/docs/`. Starlight uses each page's frontmatter to generate its title, description, and route.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Development commands
 
-Static assets, like favicons, can be placed in the `public/` directory.
+| Command | Purpose |
+| --- | --- |
+| `bun install` | Install dependencies |
+| `bun run dev` | Start the local development server |
+| `bun run build` | Validate and build the production site |
+| `bun run preview` | Preview the production build locally |
+| `bun run astro -- --help` | Show Astro CLI help |
 
-## 🧞 Commands
+## Scope and accuracy
 
-All commands are run from the root of the project, from a terminal:
+Neodash is built with Unreal Engine 4.26.2. Modding instructions should be tested against the recorded Steam build and the specific UE4SS version being used.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+This is community-authored documentation and is not affiliated with Axan Gray.
