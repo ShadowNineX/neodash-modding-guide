@@ -4,9 +4,11 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://neodash.shadownine.dev',
 	integrations: [
 		starlight({
 			title: 'Neodash Modding Guide',
+			favicon: '/favicon.png',
 			customCss: ['./src/styles/neodash.css'],
 			sidebar: [
 				{
