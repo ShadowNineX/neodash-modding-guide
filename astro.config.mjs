@@ -10,6 +10,9 @@ export default defineConfig({
 			title: 'Neodash Modding Guide',
 			description: 'Practical documentation for installing mods and understanding Neodash Unreal Engine content.',
 			favicon: '/favicon.png',
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/ShadowNineX/neodash-modding-guide' },
+			],
 			head: [
 				{ tag: 'meta', attrs: { name: 'theme-color', content: '#00eaf2' } },
 				{ tag: 'meta', attrs: { name: 'author', content: 'ShadowNine' } },
