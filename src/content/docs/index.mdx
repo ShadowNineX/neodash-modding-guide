@@ -1,93 +1,60 @@
 ---
 title: Neodash Modding Guide
-description: Community documentation for understanding, creating, and modifying Neodash content.
+description: Practical documentation for installing mods and understanding Neodash's Unreal Engine content.
 template: splash
 hero:
-  tagline: A practical starting point for understanding Neodash and documenting how its content works.
+  tagline: "Start here: install the CustomServer mod and replace Neodash's server URL."
   actions:
-    - text: Read the game findings
-      link: /reference/game-findings/
+    - text: Install the Custom Server mod
+      link: /guides/custom-server/
       icon: right-arrow
-    - text: View Neodash on Steam
-      link: https://store.steampowered.com/app/1514950/Neodash/
-      icon: external
-      variant: minimal
+    - text: Explore game findings
+      link: /reference/game-findings/
+      icon: open-book
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+## Start here
 
-## Game overview
+:::tip[Recommended first step]
 
-**Neodash** is a fast-paced arcade racing game developed and published by
-Axan Gray. Released on August 17, 2022, it challenges players to drift, steer,
-and launch a vehicle across neon tracks while avoiding traps, gaps, and a world
-that collapses behind them. Its environments react to an electronic soundtrack,
-making timing, speed, and presentation part of the same experience.
-
-<CardGrid>
-	<Card title="High-speed campaign" icon="right-arrow">
-		More than 45 levels introduce new mechanics over time, with hidden red
-		gates unlocking harder versions of stages.
-	</Card>
-	<Card title="Music-driven world" icon="heart">
-		A soundtrack of more than 25 electronic tracks drives reactive visual and
-		environmental effects.
-	</Card>
-	<Card title="Built-in level editor" icon="setting">
-		Create tracks from customizable roads, obstacles, effects, and
-		environments, then publish them for other players.
-	</Card>
-	<Card title="Community competition" icon="open-book">
-		Play and rate community levels, chase leaderboard times, and race against
-		other players' ghosts.
-	</Card>
-</CardGrid>
-
-## Quick facts
-
-<dl class="quick-facts not-content">
-	<div>
-		<dt>Developer and publisher</dt>
-		<dd>Axan Gray</dd>
-	</div>
-	<div>
-		<dt>Release date</dt>
-		<dd>August 17, 2022</dd>
-	</div>
-	<div>
-		<dt>Genres</dt>
-		<dd>Action, indie, racing</dd>
-	</div>
-	<div>
-		<dt>Steam app ID</dt>
-		<dd><code>1514950</code></dd>
-	</div>
-	<div class="wide">
-		<dt>Primary modes</dt>
-		<dd>Campaign, level editor, community levels, and time trials</dd>
-	</div>
-</dl>
-
-## Modding baseline
-
-Neodash includes an official level editor and community browser. External
-modding in this guide focuses on two additional paths:
-
-- **UE4SS** for runtime inspection, Lua scripting, and hooks.
-- **Classic UE4 Pak overrides** for cooked-asset replacement.
-
-The inspected game is based on Unreal Engine 4.26.2 and uses the internal
-project name `Runway`. See [Game Findings](/reference/game-findings/) for the verified
-engine and Steam build details, Pak structure, loose level format, runtime
-components, user-data paths, and open questions that still need in-game testing.
-
-:::note[About this guide]
-
-This is community-authored documentation and is not affiliated with Axan Gray.
-Treat version-sensitive modding details as unverified until they are reproduced
-and documented.
+[Install the Custom Server mod](/guides/custom-server/) to set up UE4SS and enable the first documented Neodash runtime mod.
 
 :::
 
-Game facts on this page are based on the
-[official Neodash Steam listing](https://store.steampowered.com/app/1514950/Neodash/).
+This guide documents practical ways to inspect and modify Neodash. Begin with the Custom Server guide, then use the reference material to understand the game's files, engine version, and modding limits.
+
+## Modding paths
+
+### Runtime mods with UE4SS
+
+Use [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) for Lua scripts, runtime inspection, and hooks. The CustomServer mod is the first walkthrough in this guide.
+
+### Cooked asset overrides
+
+Use classic UE4 Pak overrides to replace cooked assets without modifying the original game archive. Replacements must match the original Unreal package paths and be compatible with Neodash's engine version.
+
+### Official creation tools
+
+Neodash's built-in level editor and community browser remain separate from external modding. They are the supported tools for creating and sharing levels.
+
+## Quick facts
+
+| | |
+| --- | --- |
+| Developer and publisher | Axan Gray |
+| Release date | August 17, 2022 |
+| Genre | Action, indie, racing |
+| Steam app ID | `1514950` |
+| Unreal Engine | `4.26.2` |
+| Internal project | `Runway` |
+
+## Where to go next
+
+- [Install the Custom Server mod](/guides/custom-server/) — install UE4SS and enable the CustomServer Lua mod.
+- [Game Findings](/reference/game-findings/) — review verified engine, package, runtime, and file-system findings.
+
+:::note[About this guide]
+
+This is community-authored documentation and is not affiliated with Axan Gray. Version-sensitive details should be reproduced against the recorded Neodash Steam build before being treated as confirmed.
+
+:::

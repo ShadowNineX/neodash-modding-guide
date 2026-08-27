@@ -179,7 +179,7 @@ header.header {
 	width: min(58vw, 20rem);
 	aspect-ratio: 1;
 	justify-self: center;
-	background: url('/favicon.svg') center / contain no-repeat;
+	background: url('../assets/neodash_mod_loader_logo_no_bg.png') center / contain no-repeat;
 	filter: drop-shadow(0 0 0.8rem var(--neo-glow-cyan)) drop-shadow(0 0 1rem var(--neo-glow-magenta));
 	opacity: 0.96;
 }
